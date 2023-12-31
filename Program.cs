@@ -5,6 +5,12 @@
         static void Main(string[] args)
         {
             Console.WriteLine("Welcom to Our Resturant :) ");
+
+            User U = new User();
+
+            U.Register();
+
         }
+
     }
 }

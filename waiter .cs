@@ -1,6 +1,6 @@
 ﻿using System;
 
-internal class Waiter
+internal class Waiter : Worker
 {
 
 }

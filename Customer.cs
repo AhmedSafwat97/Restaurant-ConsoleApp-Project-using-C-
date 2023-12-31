@@ -1,5 +1,6 @@
 ﻿using System;
 
-internal class Customer
+internal class Customer : User
 {
+   
 }

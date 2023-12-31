@@ -1,6 +1,6 @@
 ﻿using System;
 
-internal class Chef
+internal class Chef : Worker
 {
 	
 }

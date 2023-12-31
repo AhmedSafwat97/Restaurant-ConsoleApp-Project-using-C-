@@ -1,6 +1,6 @@
 ﻿using System;
 
-internal class Admin
+internal class Admin : User
 {
 
 }

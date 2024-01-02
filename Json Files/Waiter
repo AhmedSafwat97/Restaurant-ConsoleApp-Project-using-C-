@@ -1,0 +1,20 @@
+[
+  {
+    "Salary": 0.0,
+    "Id": 0,
+    "Name": "dasdas",
+    "Phone": "dsfdsfds",
+    "Address": "sdfdsfsfd",
+    "Email": "dfdsfdf",
+    "Password": "asfafas"
+  },
+  {
+    "Salary": 0.0,
+    "Id": 0,
+    "Name": "ahmed",
+    "Phone": "12342",
+    "Address": "dfdsfggf",
+    "Email": "ahemd@gmail.com",
+    "Password": "123"
+  }
+]

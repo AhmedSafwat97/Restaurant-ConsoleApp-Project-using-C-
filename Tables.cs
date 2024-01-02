@@ -1,6 +1,9 @@
 ﻿using System;
 using Newtonsoft.Json;
-internal class Customer : User
+public class Class1
 {
-   
+	public Class1()
+	{
+
+	}
 }

@@ -1,15 +1,21 @@
 ﻿using System;
+using System.Collections.Generic;
 using Newtonsoft.Json;
+
 public class Tables
 {
     public int tableID { get; set; }
+
     public int tableSize { get; set; }
+
     public bool reservedOrNot { get; set; }
 
     public DateTime? reservedFrom { get; set; }
 
     public DateTime? reservedTo { get; set; }
 
+    public Customer ReservedBy { get; set; }
+    
     private static List<Tables> sharedListOfReservedTables = new List<Tables>();
 
     public static List<Tables> reservedTables
@@ -29,9 +35,11 @@ public class Tables
         reservedOrNot = false;
         reservedFrom = null;
         reservedTo = null;
+        ReservedBy = null;  
     }
 
-    /*
+
+    
     public static List<Tables> generateData()
     {
         List<Tables> myTables = new List<Tables>();
@@ -48,31 +56,62 @@ public class Tables
         
         return myTables;
     }
-    */
+    
+    //List<Tables> dataToJSON() = Json.Convert
 
 
-
-    public void reserveATable(Tables chosenTable)
+    public void reserveATable(Tables chosenTable, Customer CurrentUser)
     {
-        if (chosenTable.reservedOrNot)
+        if (chosenTable.reservedOrNot==true&& chosenTable.reservedTo> DateTime.Now)
         {
-            Console.WriteLine("We are afraid this table is already taken!");
+            Console.WriteLine($"We are afraid this table is already reserved until {chosenTable.reservedTo}");
         }
-        else
+
+        else //if ((chosenTable.reservedOrNot == true && chosenTable.reservedTo < DateTime.Now)||chosenTable.reservedOrNot==false)
         {
-            //flag to keep track of reservation 
+            chosenTable.reservedOrNot = false;
+            chosenTable.reservedFrom = null;
+            chosenTable.reservedTo = null;
+            chosenTable.ReservedBy = null;
+
             DateTime start;
             DateTime end;
+
             Console.WriteLine("please specify the time interval you want to reserve the table for: ");
             if (DateTime.TryParse(Console.ReadLine(), out start) && DateTime.TryParse(Console.ReadLine(), out end))
             {
                 chosenTable.reservedFrom = start;
                 chosenTable.reservedTo = end;
                 chosenTable.reservedOrNot = true;
+                chosenTable.ReservedBy = CurrentUser;
                 sharedListOfReservedTables.Add(chosenTable);
+
+                Console.WriteLine($"table number: {chosenTable.tableID} has been reserved by customer: {CurrentUser.Name} until {chosenTable.reservedTo}");
             }
+
             else
-                Console.WriteLine("Please enter a valid date and time!");
+                Console.WriteLine("The data you entered is invalid! Reservation Failed!");
         }
+
+       
+
+        //else
+        //{
+
+        //    DateTime start;
+        //    DateTime end;
+        //    Console.WriteLine("please specify the time interval you want to reserve the table for: ");
+        //    if (DateTime.TryParse(Console.ReadLine(), out start) && DateTime.TryParse(Console.ReadLine(), out end))
+        //    {
+        //        chosenTable.reservedFrom = start;
+        //        chosenTable.reservedTo = end;
+        //        chosenTable.reservedOrNot = true;
+        //        chosenTable.ReservedBy = CurrentUser;
+        //        sharedListOfReservedTables.Add(chosenTable);
+        //    }
+        //    else
+        //        Console.WriteLine("Please enter a valid date and time!");
+        //}
     }
 }
+

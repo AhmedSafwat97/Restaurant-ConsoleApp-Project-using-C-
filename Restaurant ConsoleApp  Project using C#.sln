@@ -3,13 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Restaurant ConsoleApp  Project using C#", "Restaurant ConsoleApp  Project using C#.csproj", "{C2A40D97-D433-4EFF-9A36-CE6BCE64C098}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Restaurant ConsoleApp  Project using C#", "Restaurant ConsoleApp  Project using C#.csproj", "{C2A40D97-D433-4EFF-9A36-CE6BCE64C098}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{10BC4545-1349-40E2-8D4A-FFE358BD36F1}"
 	ProjectSection(SolutionItems) = preProject
 		Admin.cs = Admin.cs
 		Chef.cs = Chef.cs
 		Customer.cs = Customer.cs
+		Tables.cs = Tables.cs
 		User.cs = User.cs
 		waiter .cs = waiter .cs
 		Worker.cs = Worker.cs

@@ -6,9 +6,44 @@
         {
             Console.WriteLine("Welcom to Our Resturant :) ");
 
-            User U = new User();
+            Sign Sign = new Sign();
 
-            U.Register();
+            bool validInput = false;
+
+            bool IsSignIn = false;
+
+
+            while (!validInput) {
+
+                Console.WriteLine("Do You Want To ((1)SignUp Or (2)SignIn)");
+                int userType;
+                bool isNumeric = int.TryParse(Console.ReadLine(), out userType);
+
+                if (isNumeric && (userType == 1 || userType == 2) ) {
+                    
+                    switch (userType)
+                    {
+                        case 1:
+                            Sign.Register();
+                            validInput = true;
+                            break;
+
+                        case 2:
+                            Console.WriteLine("There is No Function to Sign until Now");
+                            validInput = true;
+                            IsSignIn = true;
+                            Console.WriteLine(IsSignIn);
+                            break;
+
+                    }
+
+                }
+                else
+                {
+                    Console.WriteLine("Invalid choice. Please enter a valid number (1 or 2).");
+                }
+
+            }
 
         }
 

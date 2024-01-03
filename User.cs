@@ -11,16 +11,7 @@ public abstract class User
     public string Email { get; set; }
     public string Password { get; set; }
 
-
-     public User()
-    {
-        Name = string.Empty;
-        Email = string.Empty;
-        Address = string.Empty;
-        Password = string.Empty;
-        Phone = string.Empty;
-    }
-
+    
 
 
 }

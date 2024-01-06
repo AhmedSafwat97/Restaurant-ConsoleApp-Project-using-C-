@@ -10,29 +10,34 @@
 
             bool validInput = false;
 
-            bool IsSignIn = false;
-
+          
 
             while (!validInput) {
 
                 Console.WriteLine("Do You Want To ((1)SignUp Or (2)SignIn)");
                 int userType;
                 bool isNumeric = int.TryParse(Console.ReadLine(), out userType);
+                string signType;
+
 
                 if (isNumeric && (userType == 1 || userType == 2) ) {
                     
                     switch (userType)
                     {
                         case 1:
-                            Sign.Register();
+                            signType = "SignIn";
+                            Sign.Register(signType);
                             validInput = true;
                             break;
 
                         case 2:
                             Console.WriteLine("There is No Function to Sign until Now");
+                            signType = "Signup";
+                            
+                            Sign.Register(signType);
+
                             validInput = true;
-                            IsSignIn = true;
-                            Console.WriteLine(IsSignIn);
+                        
                             break;
 
                     }

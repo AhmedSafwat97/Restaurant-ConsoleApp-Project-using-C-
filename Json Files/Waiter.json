@@ -1,20 +1,11 @@
 [
   {
     "Salary": 0.0,
-    "Id": 0,
-    "Name": "asdasd",
-    "Phone": "afsasfa",
-    "Address": "adfafas",
-    "Email": "dfafafd",
-    "Password": "asfasfad"
-  },
-  {
-    "Salary": 0.0,
     "Id": 1,
-    "Name": "",
-    "Phone": "",
-    "Address": "",
-    "Email": "asdddf",
-    "Password": "ffdfd"
+    "Name": "ahmed",
+    "Phone": "0121123",
+    "Address": "sidi beshr",
+    "Email": "ahmed@gmail.com",
+    "Password": "123456"
   }
 ]

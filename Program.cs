@@ -147,6 +147,12 @@ namespace Restaurant_ConsoleApp__Project_using_C_
                 Console.WriteLine("Admin Menu");
             }
 
+
+            // make a new object from menu
+            Menu menu = new Menu();
+            // calling the "PrintMenu" and "GetMealNameId"
+            menu.PrintMenu();
+            menu.GetMealNameId();
         }
     }
 }

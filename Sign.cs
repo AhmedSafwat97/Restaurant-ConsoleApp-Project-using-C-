@@ -195,7 +195,7 @@ namespace Restaurant_ConsoleApp__Project_using_C_
         public void SaveUserData<T>(T userData , string fileName) where T : User
         {
 
-            string directoryPath = @"E:\ITI FullStack .Net Courses\C#\Project\Restaurant ConsoleApp  Project using C#\Json Files";
+            string directoryPath = @"C:\Users\Administrator\git_demo\rest\Json Files";
             string filePath = Path.Combine(directoryPath, fileName);
 
             List<T> data = new List<T>();
@@ -246,7 +246,7 @@ namespace Restaurant_ConsoleApp__Project_using_C_
             Console.WriteLine("Enter Your Password:");
             string password = Console.ReadLine();
 
-            string directoryPath = @"E:\ITI FullStack .Net Courses\C#\Project\Restaurant ConsoleApp  Project using C#\Json Files";
+            string directoryPath = @"C:\Users\Administrator\git_demo\rest\Json Files";
 
             string filePath = Path.Combine(directoryPath, fileName);
 

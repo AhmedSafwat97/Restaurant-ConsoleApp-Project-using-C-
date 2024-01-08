@@ -15,4 +15,23 @@ public abstract class User
 
 
 }
-  
+
+
+public static class CurrentUser
+{
+    public static User User { get; private set; }
+    public static string TypeOfUser { get; private set; }
+
+
+    public static void SetCurrentUser(User user , string TypeUser )
+    {
+        User = user;
+        TypeOfUser = TypeUser;
+    }
+
+    public static void ClearCurrentUser()
+    {
+        User = null;
+        TypeOfUser = null;
+    }
+}

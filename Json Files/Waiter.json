@@ -7,5 +7,32 @@
     "Address": "sidi beshr",
     "Email": "ahmed@gmail.com",
     "Password": "123456"
+  },
+  {
+    "Salary": 0.0,
+    "Id": 2,
+    "Name": "ali",
+    "Phone": "1312",
+    "Address": "asdds",
+    "Email": "ali@gmail.com",
+    "Password": "123"
+  },
+  {
+    "Salary": 0.0,
+    "Id": 3,
+    "Name": "Safwat",
+    "Phone": "0110351045",
+    "Address": "sidi beshr",
+    "Email": "Safwat@gmail.com",
+    "Password": "123"
+  },
+  {
+    "Salary": 0.0,
+    "Id": 4,
+    "Name": "Ahmed",
+    "Phone": "01212312332",
+    "Address": "Alex",
+    "Email": "AhmedSafwat12@gmail.com",
+    "Password": "123"
   }
 ]

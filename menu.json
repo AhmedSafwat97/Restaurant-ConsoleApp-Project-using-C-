@@ -1,0 +1,72 @@
+
+// Json File ----> one array carry 10 object for items in menu each object has the property and its value 
+// EX : in the first object 
+// having the property called id and the property value is 1 , the property called item and the property value is "Spaghetti Carbonara"
+// json file contain string type 
+// to take data from json to c# using ----> ReadAllText   (DeserializeObject)
+// to take data from c# to c# json ----> writeAllText     (serializeObject)
+
+
+
+[
+  {
+    "id": 1,
+    "Item": "Spaghetti Carbonara",
+    "price": 150,
+    "description": "Classic Italian pasta dish with creamy sauce, bacon, and Parmesan cheese."
+  },
+  {
+    "id": 2,
+    "Item": "Margherita Pizza",
+    "price": 120,
+    "description": "Traditional Italian pizza with tomato, mozzarella, and fresh basil."
+  },
+  {
+    "id": 3,
+    "Item": "Grilled Salmon",
+    "price": 300,
+    "description": "Fresh salmon fillet grilled to perfection, served with seasonal vegetables."
+  },
+  {
+    "id": 4,
+    "Item": "Chicken Alfredo",
+    "price": 160,
+    "description": "Creamy fettuccine pasta with grilled chicken and Alfredo sauce."
+  },
+  {
+    "id": 5,
+    "Item": "Caesar Salad",
+    "price": 140,
+    "description": "Crisp romaine lettuce, croutons, Parmesan cheese, and Caesar dressing."
+  },
+  {
+    "id": 6,
+    "Item": "Beef Burger",
+    "price": 110,
+    "description": "Juicy beef patty with lettuce, tomato, onion, and pickles, served with fries."
+  },
+  {
+    "id": 7,
+    "Item": "Mango Tango Smoothie",
+    "price": 80,
+    "description": "Refreshing smoothie made with fresh mango and yogurt."
+  },
+  {
+    "id": 8,
+    "Item": "Tiramisu",
+    "price": 85,
+    "description": "Classic Italian dessert made with layers of coffee-soaked ladyfingers and mascarpone cheese."
+  },
+  {
+    "id": 9,
+    "Item": "Vegetable Stir-Fry",
+    "price": 200,
+    "description": "Assorted fresh vegetables stir-fried in a savory sauce, served with steamed rice."
+  },
+  {
+    "id": 10,
+    "Item": "Fruit Platter",
+    "price": 160,
+    "description": "Assortment of fresh seasonal fruits, perfect for a healthy dessert."
+  }
+]

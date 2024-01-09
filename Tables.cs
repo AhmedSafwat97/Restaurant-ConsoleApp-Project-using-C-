@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,12 +15,14 @@ public class Tables
 
     public int TableSize { get; private set; }
 
+    public bool reservedOrNot { get; set; }
     public bool ReservedOrNot { get; set; }
 
     public static string UnifiedFilePath = @"C:\Users\HP\source\repos\AhmedSafwat97\Restaurant-ConsoleApp-Project-using-C-\Json Files\Tables.json";
 
     public DateTime? ReservedFrom { get; set; }
 
+    public DateTime? reservedTo { get; set; }
     public DateTime? ReservedTo { get; set; }
 
     //public Customer ReservedBy { get; set; }
@@ -29,19 +31,24 @@ public class Tables
 
     private static List<Tables> SharedListOfReservedTables = new List<Tables>();
 
-    
+    public Customer ReservedBy { get; set; }
+
+    private static List<Tables> sharedListOfReservedTables = new List<Tables>();
     public static List<Tables> ReservedTables
     {
         get { return SharedListOfReservedTables; }
     }
 
+    public static List<Tables> reservedTables
     public static List<Tables> ExistingTables
     {
+        get { return sharedListOfReservedTables; }
         get { return AllTables; }
     }
 
     static Tables()
 	{
+        sharedListOfReservedTables = new List<Tables>();
         string FilePath = @"C:\Users\HP\source\repos\AhmedSafwat97\Restaurant-ConsoleApp-Project-using-C-\Json Files\Tables.json";
         AllTables = JsonConvert.DeserializeObject<List<Tables>>(File.ReadAllText(FilePath));
         SharedListOfReservedTables = new List<Tables>();
@@ -49,6 +56,12 @@ public class Tables
 
     public Tables(int ID, int size)
     {
+        tableID = ID;
+        tableSize = size;
+        reservedOrNot = false;
+        reservedFrom = null;
+        reservedTo = null;
+        ReservedBy = null;  
         TableID = ID;
         TableSize = size;
         ReservedOrNot = false;
@@ -67,8 +80,10 @@ public class Tables
 
     public static void GenerateSampleData()
     {
+        List<Tables> myTables = new List<Tables>();
         List<Tables> tables = new List<Tables>();
 
+        for (int i = 1; i <= 10; i++)
         for (int i = 1; i <= 20; i++)
         {
             int TableSize = (i <= 10) ? 4 : 8;
@@ -77,6 +92,7 @@ public class Tables
             tables.Add(table);
         }
 
+        for (int i = 11; i <= 20; i++)
         string json = JsonConvert.SerializeObject(tables);
 
         string FilePath = @"C:\Users\HP\source\repos\AhmedSafwat97\Restaurant-ConsoleApp-Project-using-C-\Json Files\Tables.json";
@@ -207,4 +223,3 @@ public class Tables
             Console.WriteLine("the table you chose does not exist! Reservation failed!");
     }
 }
-

@@ -7,5 +7,41 @@
     "Address": "safdaf",
     "Email": "afasfdd",
     "Password": "safasfd"
+  },
+  {
+    "Salary": 0.0,
+    "Id": 2,
+    "Name": "dodo",
+    "Phone": "1123",
+    "Address": "fsdsfsd",
+    "Email": "dodo@gmail.com",
+    "Password": "123"
+  },
+  {
+    "Salary": 0.0,
+    "Id": 3,
+    "Name": "www",
+    "Phone": "21342",
+    "Address": "asdf",
+    "Email": "www@gmail.com",
+    "Password": "123"
+  },
+  {
+    "Salary": 0.0,
+    "Id": 4,
+    "Name": "sss",
+    "Phone": "32432",
+    "Address": "sddfs",
+    "Email": "sss",
+    "Password": "123"
+  },
+  {
+    "Salary": 0.0,
+    "Id": 5,
+    "Name": "Ahmed",
+    "Phone": "0111114444",
+    "Address": "Alex",
+    "Email": "Ahmed@gamil.com",
+    "Password": "123"
   }
 ]

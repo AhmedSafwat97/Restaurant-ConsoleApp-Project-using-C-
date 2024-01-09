@@ -1,0 +1,162 @@
+[
+  {
+    "TableID": 1,
+    "TableSize": 4,
+    "ReservedOrNot": false,
+    "ReservedFrom": null,
+    "ReservedTo": null,
+    "ReservedBy": null
+  },
+  {
+    "TableID": 2,
+    "TableSize": 4,
+    "ReservedOrNot": false,
+    "ReservedFrom": null,
+    "ReservedTo": null,
+    "ReservedBy": null
+  },
+  {
+    "TableID": 3,
+    "TableSize": 4,
+    "ReservedOrNot": false,
+    "ReservedFrom": null,
+    "ReservedTo": null,
+    "ReservedBy": null
+  },
+  {
+    "TableID": 4,
+    "TableSize": 4,
+    "ReservedOrNot": false,
+    "ReservedFrom": null,
+    "ReservedTo": null,
+    "ReservedBy": null
+  },
+  {
+    "TableID": 5,
+    "TableSize": 4,
+    "ReservedOrNot": false,
+    "ReservedFrom": null,
+    "ReservedTo": null,
+    "ReservedBy": null
+  },
+  {
+    "TableID": 6,
+    "TableSize": 4,
+    "ReservedOrNot": false,
+    "ReservedFrom": null,
+    "ReservedTo": null,
+    "ReservedBy": null
+  },
+  {
+    "TableID": 7,
+    "TableSize": 4,
+    "ReservedOrNot": false,
+    "ReservedFrom": null,
+    "ReservedTo": null,
+    "ReservedBy": null
+  },
+  {
+    "TableID": 8,
+    "TableSize": 4,
+    "ReservedOrNot": false,
+    "ReservedFrom": null,
+    "ReservedTo": null,
+    "ReservedBy": null
+  },
+  {
+    "TableID": 9,
+    "TableSize": 4,
+    "ReservedOrNot": false,
+    "ReservedFrom": null,
+    "ReservedTo": null,
+    "ReservedBy": null
+  },
+  {
+    "TableID": 10,
+    "TableSize": 4,
+    "ReservedOrNot": false,
+    "ReservedFrom": null,
+    "ReservedTo": null,
+    "ReservedBy": null
+  },
+  {
+    "TableID": 11,
+    "TableSize": 8,
+    "ReservedOrNot": false,
+    "ReservedFrom": null,
+    "ReservedTo": null,
+    "ReservedBy": null
+  },
+  {
+    "TableID": 12,
+    "TableSize": 8,
+    "ReservedOrNot": false,
+    "ReservedFrom": null,
+    "ReservedTo": null,
+    "ReservedBy": null
+  },
+  {
+    "TableID": 13,
+    "TableSize": 8,
+    "ReservedOrNot": false,
+    "ReservedFrom": null,
+    "ReservedTo": null,
+    "ReservedBy": null
+  },
+  {
+    "TableID": 14,
+    "TableSize": 8,
+    "ReservedOrNot": false,
+    "ReservedFrom": null,
+    "ReservedTo": null,
+    "ReservedBy": null
+  },
+  {
+    "TableID": 15,
+    "TableSize": 8,
+    "ReservedOrNot": false,
+    "ReservedFrom": null,
+    "ReservedTo": null,
+    "ReservedBy": null
+  },
+  {
+    "TableID": 16,
+    "TableSize": 8,
+    "ReservedOrNot": false,
+    "ReservedFrom": null,
+    "ReservedTo": null,
+    "ReservedBy": null
+  },
+  {
+    "TableID": 17,
+    "TableSize": 8,
+    "ReservedOrNot": false,
+    "ReservedFrom": null,
+    "ReservedTo": null,
+    "ReservedBy": null
+  },
+  {
+    "TableID": 18,
+    "TableSize": 8,
+    "ReservedOrNot": false,
+    "ReservedFrom": null,
+    "ReservedTo": null,
+    "ReservedBy": null
+  },
+  {
+    "TableID": 19,
+    "TableSize": 8,
+    "ReservedOrNot": false,
+    "ReservedFrom": null,
+    "ReservedTo": null,
+    "ReservedBy": null
+  },
+  {
+    "TableID": 20,
+    "TableSize": 8,
+    "ReservedOrNot": false,
+    "ReservedFrom": null,
+    "ReservedTo": null,
+    "ReservedBy": null
+  }
+]

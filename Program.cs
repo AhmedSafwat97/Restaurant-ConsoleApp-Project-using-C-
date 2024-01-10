@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 
 namespace Restaurant_ConsoleApp__Project_using_C_
 {
@@ -6,6 +7,31 @@ namespace Restaurant_ConsoleApp__Project_using_C_
     {
         static void Main(string[] args)
         {
+           
+
+         
+
+            //string smtpserver = ConfigurationSettings.AppSettings["smtp"];
+            //string sharelocation = ConfigurationSettings.AppSettings["share"];
+            //string usercount = ConfigurationSettings.AppSettings["UserCount"];
+            //Console.WriteLine(smtpserver);
+            //Console.WriteLine(sharelocation);
+            //Console.WriteLine(usercount);
+            //Console.Read();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             Console.WriteLine("Welcom to Our Resturant :) ");
             Console.WriteLine("***************************");
 

@@ -1,4 +1,6 @@
 ﻿using Newtonsoft.Json;
+using System.Configuration;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 
 namespace Restaurant_ConsoleApp__Project_using_C_
@@ -22,15 +24,73 @@ namespace Restaurant_ConsoleApp__Project_using_C_
         // making list of menu called menulist
         List<Menu> Menulist;
 
+        //List<Menu> Menulist = new List<Menu> { };
+
         // create a void function to print menu data 
         public void PrintMenu()
+
         {
+            string menuJsonFilePath = File.ReadAllText(ConfigurationManager.AppSettings["JsonFilesPath"] + "menu.json");
+            Menulist = JsonConvert.DeserializeObject<List<Menu>>(menuJsonFilePath);
+
+
+            //string menuJsonFilePath =ConfigurationManager.AppSettings["JsonFilesPath"] + "menu.json";
+
+            //////if (File.Exists(menuJsonFilePath))
+            //////{
+            //////    // Read the existing data and deserialize it
+            //string json = File.ReadAllText(menuJsonFilePath);
+            //Menulist = JsonConvert.DeserializeObject<List<Menu>>(json);
+
+            ////}
+
+
+            //string basePath = ConfigurationManager.AppSettings["JsonFilesPath"];
+            //if (!string.IsNullOrEmpty(basePath))
+            //{
+            //    string menuJsonFilePath = Path.Combine(basePath, "menu.json");
+
+            //    if (File.Exists(menuJsonFilePath))
+            //    {
+            //        try
+            //        {
+            //            string json = File.ReadAllText(menuJsonFilePath);
+            //            Menulist = JsonConvert.DeserializeObject<List<Menu>>(json) ?? new List<Menu>();
+            //        }
+            //        catch (Exception ex)
+            //        {
+            //            // Handle the exception, e.g., log the error or take appropriate action
+            //            Console.WriteLine("Error occurred during JSON deserialization: " + ex.Message);
+            //        }
+            //    }
+            //    else
+            //    {
+            //        // Handle the case where the file doesn't exist
+            //        Console.WriteLine("Menu JSON file does not exist.");
+            //    }
+            //}
+            //else
+            //{
+            //    // Handle the case where the base path is not specified
+            //    Console.WriteLine("JsonFilesPath is not specified in the configuration.");
+            //}
+
+
+
+
+
+
+
+
+            //string json = File.ReadAllText(menuJsonFilePath);
+            //Menulist = JsonConvert.DeserializeObject<List<Menu>>(json) ?? new List<Menu>();
             // take data from jason file by readalltext and set the path of jsonfile and put them in variable called "json" with string data type
 
-            string json = File.ReadAllText("C:\\Users\\Administrator\\git_demo\\rest\\menu.json");
+
 
             // put the data in the menu list that called menulist by making Deserializition of the list menu from variable json that take the path of json file
-            Menulist = JsonConvert.DeserializeObject<List<Menu>>(json);
+            ///
+
             //  start a new line by (\n)
             Console.WriteLine("Menu \n");
 

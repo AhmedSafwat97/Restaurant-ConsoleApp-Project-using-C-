@@ -34,5 +34,23 @@
     "Address": "Alex",
     "Email": "AhmedSafwat12@gmail.com",
     "Password": "123"
+  },
+  {
+    "Salary": 0.0,
+    "Id": 5,
+    "Name": "1",
+    "Phone": "1111111",
+    "Address": "44444444",
+    "Email": "1",
+    "Password": "111111111111"
+  },
+  {
+    "Salary": 0.0,
+    "Id": 6,
+    "Name": "9999",
+    "Phone": "999999999",
+    "Address": "9999999999999",
+    "Email": "999999999",
+    "Password": "999999"
   }
 ]

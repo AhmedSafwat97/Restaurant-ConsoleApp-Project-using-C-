@@ -9,7 +9,7 @@
   },
   {
     "TableID": 2,
-    "TableSize": 4,
+    "TableSize": 8,
     "ReservedOrNot": false,
     "ReservedFrom": null,
     "ReservedTo": null,
@@ -25,7 +25,7 @@
   },
   {
     "TableID": 4,
-    "TableSize": 4,
+    "TableSize": 8,
     "ReservedOrNot": false,
     "ReservedFrom": null,
     "ReservedTo": null,
@@ -41,7 +41,7 @@
   },
   {
     "TableID": 6,
-    "TableSize": 4,
+    "TableSize": 8,
     "ReservedOrNot": false,
     "ReservedFrom": null,
     "ReservedTo": null,
@@ -57,7 +57,7 @@
   },
   {
     "TableID": 8,
-    "TableSize": 4,
+    "TableSize": 8,
     "ReservedOrNot": false,
     "ReservedFrom": null,
     "ReservedTo": null,
@@ -73,7 +73,7 @@
   },
   {
     "TableID": 10,
-    "TableSize": 4,
+    "TableSize": 8,
     "ReservedOrNot": false,
     "ReservedFrom": null,
     "ReservedTo": null,
@@ -81,7 +81,7 @@
   },
   {
     "TableID": 11,
-    "TableSize": 8,
+    "TableSize": 4,
     "ReservedOrNot": false,
     "ReservedFrom": null,
     "ReservedTo": null,
@@ -97,7 +97,7 @@
   },
   {
     "TableID": 13,
-    "TableSize": 8,
+    "TableSize": 4,
     "ReservedOrNot": false,
     "ReservedFrom": null,
     "ReservedTo": null,
@@ -113,7 +113,7 @@
   },
   {
     "TableID": 15,
-    "TableSize": 8,
+    "TableSize": 4,
     "ReservedOrNot": false,
     "ReservedFrom": null,
     "ReservedTo": null,
@@ -129,7 +129,7 @@
   },
   {
     "TableID": 17,
-    "TableSize": 8,
+    "TableSize": 4,
     "ReservedOrNot": false,
     "ReservedFrom": null,
     "ReservedTo": null,
@@ -145,7 +145,7 @@
   },
   {
     "TableID": 19,
-    "TableSize": 8,
+    "TableSize": 4,
     "ReservedOrNot": false,
     "ReservedFrom": null,
     "ReservedTo": null,

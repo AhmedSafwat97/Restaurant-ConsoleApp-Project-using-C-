@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "Restaurant ConsoleApp  Project using C#": {
+      "commandName": "Project"
+    },
+    "WSL": {
+      "commandName": "WSL2",
+      "distributionName": ""
+    }
+  }
+}

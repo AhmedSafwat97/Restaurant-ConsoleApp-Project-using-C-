@@ -7,9 +7,9 @@ namespace Restaurant_ConsoleApp__Project_using_C_
     {
         static void Main(string[] args)
         {
-           
 
-         
+            
+
 
             //string smtpserver = ConfigurationSettings.AppSettings["smtp"];
             //string sharelocation = ConfigurationSettings.AppSettings["share"];
@@ -29,7 +29,7 @@ namespace Restaurant_ConsoleApp__Project_using_C_
 
 
 
-
+            Console.WriteLine("safi");
 
 
             Console.WriteLine("Welcom to Our Resturant :) ");
@@ -134,6 +134,7 @@ namespace Restaurant_ConsoleApp__Project_using_C_
 
                                 case 1:
                                     Console.WriteLine("View Menu and Make Order Options");
+                                    
                                     break;
                                 case 2:
                                     Console.WriteLine("Book a table Options");
@@ -173,12 +174,14 @@ namespace Restaurant_ConsoleApp__Project_using_C_
                 Console.WriteLine("Admin Menu");
             }
 
-
             // make a new object from menu
-            Menu menu = new Menu();
+            //Menu menu = new Menu();
+            
             // calling the "PrintMenu" and "GetMealNameId"
-            menu.PrintMenu();
-            menu.GetMealNameId();
+            //menu.PrintMenu();
+            //menu.GetMealNameId();
+
+
         }
     }
 }

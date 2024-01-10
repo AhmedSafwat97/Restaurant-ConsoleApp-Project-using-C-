@@ -247,7 +247,7 @@ namespace Restaurant_ConsoleApp__Project_using_C_
             Console.WriteLine("Enter Your Password:");
             string password = Console.ReadLine();
 
-            string directoryPath = @"C:\Users\Administrator\git_demo\rest\Json Files";
+            string directoryPath = ConfigurationManager.AppSettings["JsonFilesPath"];
 
             string filePath = Path.Combine(directoryPath, fileName);
 

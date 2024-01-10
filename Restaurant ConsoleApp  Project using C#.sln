@@ -10,6 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Admin.cs = Admin.cs
 		Chef.cs = Chef.cs
 		Customer.cs = Customer.cs
+		Order.cs = Order.cs
 		Tables.cs = Tables.cs
 		User.cs = User.cs
 		waiter .cs = waiter .cs

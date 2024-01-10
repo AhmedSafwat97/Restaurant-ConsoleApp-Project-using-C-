@@ -9,7 +9,7 @@ namespace Restaurant_ConsoleApp__Project_using_C_
 
 
 
-
+    
     // create class menu that contains 4 properties (id,item,price,descreption) and list of menu 
     // using properties to make the program more secure and 
     //enable a class to expose a public way of getting and setting values, while hiding implementation 
@@ -18,11 +18,11 @@ namespace Restaurant_ConsoleApp__Project_using_C_
 
         public int Id { get; set; }
         public string Item { get; set; }
-        public decimal Price { get; set; }
+        public double Price { get; set; }
         public string Description { get; set; }
 
         // making list of menu called menulist
-        List<Menu> Menulist;
+        public List<Menu> Menulist;
 
         //List<Menu> Menulist = new List<Menu> { };
 
@@ -126,7 +126,7 @@ namespace Restaurant_ConsoleApp__Project_using_C_
                 includes (id of meal , name of meal ,  price of the meal, description of the meal) 
 
                 */
-        public void GetMealNameId()
+        /*public void GetMealNameId()
         {
 
 
@@ -149,7 +149,7 @@ namespace Restaurant_ConsoleApp__Project_using_C_
                 that means the first element is at index 0 so 
                 if the user but the id = 1 ---> [1-1]=0 that display the first item that carry the 0 index
 
-                 */
+                 //
 
 
                 Menu Items = Menulist[IdFromUser - 1];
@@ -164,7 +164,7 @@ namespace Restaurant_ConsoleApp__Project_using_C_
             {
                 Console.WriteLine("The menu is empty.");
             }
-        }
+        }*/
     }
 }
 

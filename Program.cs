@@ -138,9 +138,11 @@ namespace Restaurant_ConsoleApp__Project_using_C_
                                     break;
                                 case 2:
                                     Console.WriteLine("Book a table Options");
+                                    Tables.ReserveTable();
                                     break;
                                 case 3:
                                     Console.WriteLine("View My History");
+                                    Tables.ShowAvailableTables();  
                                     break;
                                 case 4:
                                     // this is logout function that remove the current user data from the memory

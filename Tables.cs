@@ -4,6 +4,7 @@ using System.IO;
 using Newtonsoft.Json;
 using System.Globalization;
 using System.Configuration;
+using Restaurant_ConsoleApp__Project_using_C_;
 
 public class Tables
 {
@@ -21,40 +22,43 @@ public class Tables
 
     public User? ReservedBy { get; set; }
 
-    public static List<Tables> AllTables = new List<Tables>();
+    public static List<Tables> AllTables;
 
-    public static List<Tables> SharedListOfReservedTables = new List<Tables>();
+    //static List<Tables> TablesList;
 
-    public static List<Tables> ReservedTables
-    {
-        get { return SharedListOfReservedTables; }
-    }
 
-    public static List<Tables> ExistingTables
-    {
-        get { return AllTables; }
-    }
+    //public static List<Tables> SharedListOfReservedTables = new List<Tables>();
 
-    //static Tables()
+    //public static List<Tables> ReservedTables
     //{
-    //    AllTables = JsonConvert.DeserializeObject<List<Tables>>(File.ReadAllText(UnifiedFilePath));
-    //    SharedListOfReservedTables = new List<Tables>();
+    //    get { return SharedListOfReservedTables; }
     //}
 
-    public Tables(int ID, int size)
+    //public static List<Tables> ExistingTables
+    //{
+    //    get { return AllTables; }
+    //}
+
+    static Tables()
     {
-        TableID = ID;
-        TableSize = size;
-        ReservedOrNot = false;
-        ReservedFrom = null;
-        ReservedTo = null;
-        ReservedBy = null;
+        AllTables = JsonConvert.DeserializeObject<List<Tables>>(File.ReadAllText(UnifiedFilePath));
+        //SharedListOfReservedTables = new List<Tables>();
     }
+
+    //public Tables(int ID, int size)
+    //{
+    //    TableID = ID;
+    //    TableSize = size;
+    //    ReservedOrNot = false;
+    //    ReservedFrom = null;
+    //    ReservedTo = null;
+    //    ReservedBy = null;
+    //}
 
     //private static void SetAllTablesData()
     //{
-    //    string AllTablesJSON = File.ReadAllText(UnifiedFilePath);
-    //    AllTables = JsonConvert.DeserializeObject<List<Tables>>(AllTablesJSON);
+    //    string TablesJSON = File.ReadAllText(ConfigurationManager.AppSettings["JsonFilesPath"] + "Tables.json");
+    //    AllTables = JsonConvert.DeserializeObject<List<Tables>>(TablesJSON);
     //}
 
     public static void UpdateTablesData()
@@ -118,9 +122,9 @@ public class Tables
 
         if (int.TryParse(userInput, out ChosenTableID))
         {
-            UpdateTablesData();
+            //UpdateTablesData();
 
-            Tables? ChosenTable = AllTables.FirstOrDefault(t => t.TableID == ChosenTableID);
+            Tables ChosenTable = AllTables.FirstOrDefault(t => t.TableID == ChosenTableID);
 
             if (ChosenTable != null)
             {
@@ -154,11 +158,11 @@ public class Tables
                                 ChosenTable.ReservedOrNot = true;
                                 ChosenTable.ReservedBy = CurrentUser.User;
 
-                                SharedListOfReservedTables.Add(ChosenTable);
+                                //SharedListOfReservedTables.Add(ChosenTable);
 
                                 Console.WriteLine($"table number: {ChosenTableID} has been reserved by customer:  until {ChosenTable.ReservedTo}");
 
-                                Tables? TableToUpdate = AllTables.FirstOrDefault(t => t.TableID == ChosenTable.TableID);
+                                Tables? TableToUpdate = AllTables  .FirstOrDefault(t => t.TableID == ChosenTable.TableID);
                                 if (TableToUpdate != null)
                                 {
                                     TableToUpdate.ReservedOrNot = ChosenTable.ReservedOrNot;
@@ -180,11 +184,11 @@ public class Tables
                                 ChosenTable.ReservedOrNot = true;
                                 ChosenTable.ReservedBy = CurrentUser.User;
 
-                                SharedListOfReservedTables.Add(ChosenTable);
+                                //SharedListOfReservedTables.Add(ChosenTable);
 
                                 Console.WriteLine($"table number: {ChosenTableID} has been reserved by customer:  until {ChosenTable.ReservedTo}");
 
-                                Tables? TableToUpdate = AllTables.FirstOrDefault(t => t.TableID == ChosenTable.TableID);
+                                Tables? TableToUpdate = AllTables  .FirstOrDefault(t => t.TableID == ChosenTable.TableID);
                                 if (TableToUpdate != null)
                                 {
                                     TableToUpdate.ReservedOrNot = ChosenTable.ReservedOrNot;
@@ -192,7 +196,7 @@ public class Tables
                                     TableToUpdate.ReservedTo = ChosenTable.ReservedTo;
                                 }
 
-                                string UpdatedJson = JsonConvert.SerializeObject(AllTables, Formatting.Indented);
+                                string UpdatedJson = JsonConvert.SerializeObject(AllTables  , Formatting.Indented);
                                 File.WriteAllText(UnifiedFilePath, UpdatedJson);
 
                                 DateTimeInputStatus = true;

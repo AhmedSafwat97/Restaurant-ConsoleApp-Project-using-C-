@@ -20,6 +20,7 @@ namespace Restaurant_ConsoleApp__Project_using_C_
         public string Item { get; set; }
         public double Price { get; set; }
         public string Description { get; set; }
+        public int Quantity { get; set; } = 1;
 
         // making list of menu called menulist
         public List<Menu> Menulist;
@@ -27,6 +28,12 @@ namespace Restaurant_ConsoleApp__Project_using_C_
         //List<Menu> Menulist = new List<Menu> { };
 
         // create a void function to print menu data 
+
+
+
+
+
+
         public void PrintMenu()
 
         {
@@ -78,21 +85,11 @@ namespace Restaurant_ConsoleApp__Project_using_C_
 
 
 
+            Menulist = JsonConvert.DeserializeObject<List<Menu>>(menuJsonFilePath) ?? new List<Menu>();
 
 
-
-
-            //string json = File.ReadAllText(menuJsonFilePath);
-            //Menulist = JsonConvert.DeserializeObject<List<Menu>>(json) ?? new List<Menu>();
-            // take data from jason file by readalltext and set the path of jsonfile and put them in variable called "json" with string data type
-
-
-
-            // put the data in the menu list that called menulist by making Deserializition of the list menu from variable json that take the path of json file
-            ///
-
-            //  start a new line by (\n)
-            Console.WriteLine("Menu \n");
+           //  start a new line by (\n)
+           Console.WriteLine("Menu \n");
 
             Console.WriteLine("------------------------------------------------------");
             /* 1) print the title of the table i made with fixed spaces by using string.format method that make Control alignment
@@ -126,71 +123,12 @@ namespace Restaurant_ConsoleApp__Project_using_C_
                 includes (id of meal , name of meal ,  price of the meal, description of the meal) 
 
                 */
-        /*public void GetMealNameId()
+
+        public Menu GetMealNameId(int id)
         {
+            // Assuming Menulist is already populated
+            return Menulist.FirstOrDefault(item => item.Id == id);
+        }
 
-
-
-            Console.WriteLine("\n enter the meal id : \n");
-
-            // using if to make validition to sure that the menu list have items and not empty before the user choose from menu
-            // . count --->is a property that  Count the total number of elements in the List
-            // the condition ----> if the total number of elements in the menulist is more than zero (have at least an item)
-
-            if (Menulist.Count > 0)
-            {
-                // take from the user the id of the meal name 
-                // int . parse ---->to parse a string variable called IdFromUser to an integer
-                int IdFromUser = int.Parse(Console.ReadLine());
-                /*
-                 * (menu items)---> variable that assigned the menu item from the Menulist 
-                square brackets to access the index of the Menulist. 
-                subtracting 1 from IdFromUser because list indices start from 0 index
-                that means the first element is at index 0 so 
-                if the user but the id = 1 ---> [1-1]=0 that display the first item that carry the 0 index
-
-                 //
-
-
-                Menu Items = Menulist[IdFromUser - 1];
-
-                // with string formating ---> print ( the item's name, and price,Description) that the user choose by the id
-
-                Console.WriteLine(string.Format("\n Meal Name: {0, -20} \t Price: {1, -10} \n Description: {2, -30}", Items.Item, Items.Price, Items.Description));
-            }
-
-            // if the list is empty print ("The menu is empty.")
-            else
-            {
-                Console.WriteLine("The menu is empty.");
-            }
-        }*/
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

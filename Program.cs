@@ -8,30 +8,6 @@ namespace Restaurant_ConsoleApp__Project_using_C_
         static void Main(string[] args)
         {
 
-            
-
-
-            //string smtpserver = ConfigurationSettings.AppSettings["smtp"];
-            //string sharelocation = ConfigurationSettings.AppSettings["share"];
-            //string usercount = ConfigurationSettings.AppSettings["UserCount"];
-            //Console.WriteLine(smtpserver);
-            //Console.WriteLine(sharelocation);
-            //Console.WriteLine(usercount);
-            //Console.Read();
-
-
-
-
-
-
-
-
-
-
-
-            Console.WriteLine("safi");
-
-
             Console.WriteLine("Welcom to Our Resturant :) ");
             Console.WriteLine("***************************");
 
@@ -134,15 +110,22 @@ namespace Restaurant_ConsoleApp__Project_using_C_
 
                                 case 1:
                                     Console.WriteLine("View Menu and Make Order Options");
-                                    
+                                    //make a new object from menu
+                                    Menu menu = new Menu();
+                                    Order Order = new Order();
+                                    menu.PrintMenu();
+                                    Order.CreateOrder(menu);
+                                    Order.SaveOrder();
+
                                     break;
                                 case 2:
                                     Console.WriteLine("Book a table Options");
+                                    Tables.ShowAvailableTables();
                                     Tables.ReserveTable();
                                     break;
                                 case 3:
                                     Console.WriteLine("View My History");
-                                    Tables.ShowAvailableTables();  
+                                    
                                     break;
                                 case 4:
                                     // this is logout function that remove the current user data from the memory
@@ -176,12 +159,7 @@ namespace Restaurant_ConsoleApp__Project_using_C_
                 Console.WriteLine("Admin Menu");
             }
 
-            // make a new object from menu
-            //Menu menu = new Menu();
-            
-            // calling the "PrintMenu" and "GetMealNameId"
-            //menu.PrintMenu();
-            //menu.GetMealNameId();
+       
 
 
         }

@@ -8,13 +8,15 @@ using Restaurant_ConsoleApp__Project_using_C_;
 
 public class Tables
 {
+    [JsonProperty]
     public int TableID { get; private set; }
 
+    [JsonProperty]
     public int TableSize { get; private set; }
 
     public bool ReservedOrNot { get; set; }
 
-    public static string UnifiedFilePath = @"C:\Users\HP\source\repos\AhmedSafwat97\Restaurant-ConsoleApp-Project-using-C-\Json Files\Tables.json";
+    public static string UnifiedFilePath = @"E:\ITI FullStack .Net Courses\C#\Project\Restaurant ConsoleApp  Project using C#\Json Files\Tables.json";
 
     public DateTime? ReservedFrom { get; set; }
 
@@ -60,6 +62,9 @@ public class Tables
     //    string TablesJSON = File.ReadAllText(ConfigurationManager.AppSettings["JsonFilesPath"] + "Tables.json");
     //    AllTables = JsonConvert.DeserializeObject<List<Tables>>(TablesJSON);
     //}
+
+
+
 
     public static void UpdateTablesData()
     {
@@ -110,7 +115,6 @@ public class Tables
 
     public static void ReserveTable()
     {
-        int ChosenTableID;
         Console.WriteLine("please enter the ID of the table you want to reserve (or type 'exit' to exit): ");
         string userInput = Console.ReadLine();
 
@@ -120,8 +124,10 @@ public class Tables
             return;
         }
 
-        if (int.TryParse(userInput, out ChosenTableID))
+        if (int.TryParse(userInput, out int ChosenTableID))
         {
+
+
             //UpdateTablesData();
 
             Tables ChosenTable = AllTables.FirstOrDefault(t => t.TableID == ChosenTableID);
@@ -142,14 +148,26 @@ public class Tables
                     DateTime start;
                     DateTime end;
 
-                    Console.WriteLine("please specify the time interval you want to reserve the table for:\n" + "date and time in the format yyyy-MM-dd HH:mm");
-
                     bool DateTimeInputStatus = false;
 
                     while (DateTimeInputStatus == false)
                     {
-                        if (DateTime.TryParseExact(Console.ReadLine(), "yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture, DateTimeStyles.None, out start)
-                        && DateTime.TryParseExact(Console.ReadLine(), "yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture, DateTimeStyles.None, out end))
+
+                        Console.WriteLine("Enter the start date (yyyy-MM-dd):");
+                        string startDateInput = Console.ReadLine();
+                        Console.WriteLine("Enter the start time (HH:mm):");
+                        string startTimeInput = Console.ReadLine();
+                        Console.WriteLine("Enter the end time (HH:mm):");
+                        string endTimeInput = Console.ReadLine();
+
+
+
+                        //if (DateTime.TryParseExact(Console.ReadLine(), "Write The time that you want to start as yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture, DateTimeStyles.None, out start)
+                        //&& DateTime.TryParseExact(Console.ReadLine(), "Write The time that you want to end as  yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture, DateTimeStyles.None, out end))
+
+
+                        if (DateTime.TryParseExact(startDateInput + " " + startTimeInput, "yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture, DateTimeStyles.None, out start)
+                            && DateTime.TryParseExact(startDateInput + " " + endTimeInput, "yyyy-MM-dd HH:mm", CultureInfo.InvariantCulture, DateTimeStyles.None, out end))
                         {
                             if (start < end)
                             {
@@ -160,9 +178,9 @@ public class Tables
 
                                 //SharedListOfReservedTables.Add(ChosenTable);
 
-                                Console.WriteLine($"table number: {ChosenTableID} has been reserved by customer:  until {ChosenTable.ReservedTo}");
+                                Console.WriteLine($"table number: {ChosenTableID} has been reserved by {CurrentUser.User.Name}: from {ChosenTable.ReservedFrom}  until {ChosenTable.ReservedTo}");
 
-                                Tables? TableToUpdate = AllTables  .FirstOrDefault(t => t.TableID == ChosenTable.TableID);
+                                Tables? TableToUpdate = AllTables.FirstOrDefault(t => t.TableID == ChosenTable.TableID);
                                 if (TableToUpdate != null)
                                 {
                                     TableToUpdate.ReservedOrNot = ChosenTable.ReservedOrNot;
@@ -170,7 +188,7 @@ public class Tables
                                     TableToUpdate.ReservedTo = ChosenTable.ReservedTo;
                                 }
 
-                                string UpdatedJson = JsonConvert.SerializeObject(AllTables, Formatting.Indented);
+                                string UpdatedJson = JsonConvert.SerializeObject(AllTables, Formatting.Indented );
                                 File.WriteAllText(UnifiedFilePath, UpdatedJson);
 
                                 DateTimeInputStatus = true;
@@ -188,7 +206,7 @@ public class Tables
 
                                 Console.WriteLine($"table number: {ChosenTableID} has been reserved by customer:  until {ChosenTable.ReservedTo}");
 
-                                Tables? TableToUpdate = AllTables  .FirstOrDefault(t => t.TableID == ChosenTable.TableID);
+                                Tables? TableToUpdate = AllTables.FirstOrDefault(t => t.TableID == ChosenTable.TableID);
                                 if (TableToUpdate != null)
                                 {
                                     TableToUpdate.ReservedOrNot = ChosenTable.ReservedOrNot;
@@ -196,7 +214,7 @@ public class Tables
                                     TableToUpdate.ReservedTo = ChosenTable.ReservedTo;
                                 }
 
-                                string UpdatedJson = JsonConvert.SerializeObject(AllTables  , Formatting.Indented);
+                                string UpdatedJson = JsonConvert.SerializeObject(AllTables, Formatting.Indented);
                                 File.WriteAllText(UnifiedFilePath, UpdatedJson);
 
                                 DateTimeInputStatus = true;

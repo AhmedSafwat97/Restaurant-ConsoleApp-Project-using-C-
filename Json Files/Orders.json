@@ -1,3 +1,36 @@
-[
-
-]
+{
+  "Menulist": null,
+  "OrderId": 0,
+  "OrderedBy": {
+    "Id": 2,
+    "Name": "ssss",
+    "Phone": "asas",
+    "Address": "sasas",
+    "Email": "sss",
+    "Password": "123"
+  },
+  "OrderedItems": [
+    {
+      "Menulist": null,
+      "Id": 2,
+      "Item": "Margherita Pizza",
+      "Price": 120.0,
+      "Description": "Traditional Italian pizza with tomato, mozzarella, and fresh basil.",
+      "Quantity": 1
+    },
+    {
+      "Menulist": null,
+      "Id": 3,
+      "Item": "Grilled Salmon",
+      "Price": 300.0,
+      "Description": "Fresh salmon fillet grilled to perfection, served with seasonal vegetables.",
+      "Quantity": 1
+    }
+  ],
+  "TotalPrice": 420.0,
+  "Id": 0,
+  "Item": null,
+  "Price": 0.0,
+  "Description": null,
+  "Quantity": 1
+}

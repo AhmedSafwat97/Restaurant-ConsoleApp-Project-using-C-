@@ -18,10 +18,17 @@
   {
     "TableID": 3,
     "TableSize": 4,
-    "ReservedOrNot": false,
-    "ReservedFrom": null,
-    "ReservedTo": null,
-    "ReservedBy": null
+    "ReservedOrNot": true,
+    "ReservedFrom": "2024-03-15T11:00:00",
+    "ReservedTo": "2024-03-15T12:00:00",
+    "ReservedBy": {
+      "Id": 19,
+      "Name": "dddd",
+      "Phone": "dddd",
+      "Address": "dddd",
+      "Email": "dddd",
+      "Password": "dddd"
+    }
   },
   {
     "TableID": 4,
@@ -42,10 +49,17 @@
   {
     "TableID": 6,
     "TableSize": 8,
-    "ReservedOrNot": false,
-    "ReservedFrom": null,
-    "ReservedTo": null,
-    "ReservedBy": null
+    "ReservedOrNot": true,
+    "ReservedFrom": "2024-01-12T10:00:00",
+    "ReservedTo": "2024-01-12T12:00:00",
+    "ReservedBy": {
+      "Id": 2,
+      "Name": "ssss",
+      "Phone": "asas",
+      "Address": "sasas",
+      "Email": "sss",
+      "Password": "123"
+    }
   },
   {
     "TableID": 7,
@@ -114,10 +128,17 @@
   {
     "TableID": 15,
     "TableSize": 4,
-    "ReservedOrNot": false,
-    "ReservedFrom": null,
-    "ReservedTo": null,
-    "ReservedBy": null
+    "ReservedOrNot": true,
+    "ReservedFrom": "2024-02-14T12:00:00",
+    "ReservedTo": "2024-02-14T15:00:00",
+    "ReservedBy": {
+      "Id": 2,
+      "Name": "ssss",
+      "Phone": "asas",
+      "Address": "sasas",
+      "Email": "sss",
+      "Password": "123"
+    }
   },
   {
     "TableID": 16,

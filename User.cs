@@ -2,7 +2,7 @@
 using System.Xml;
 
 
-public abstract class User
+public  class User 
 {
     public int Id { get; set; }
     public string Name { get; set; }
@@ -10,9 +10,6 @@ public abstract class User
     public string Address { get; set; }
     public string Email { get; set; }
     public string Password { get; set; }
-
-    
-
 
 }
 
